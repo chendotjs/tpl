@@ -25,5 +25,3 @@ foreach(testObj ${PROGS})
   include_directories(${SRC})
 endforeach()
 
-
-add_custom_command(TARGET test125 POST_BUILD COMMAND perl ${CMAKE_CURRENT_SOURCE_DIR}/do_tests)
