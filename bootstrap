@@ -6,6 +6,6 @@
 set -x
 aclocal -I config
 autoheader
-glibtoolize --copy --force
+glibtoolize --copy --force # if linux, use libtoolize
 automake --foreign --add-missing --copy
 autoconf
