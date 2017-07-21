@@ -23,5 +23,13 @@ foreach(testObj ${PROGS})
   target_link_libraries(${testObj} tpl)
   link_directories(${SRC})
   include_directories(${SRC})
+  install(TARGETS ${testObj} RUNTIME DESTINATION test)
 endforeach()
 
+
+file(GLOB TEST_FILES ${SRC}/tests "*.ans" "*.tpl" "do_tests")
+message(${TEST_FILES})
+
+# SET(CMAKE_INSTALL_PREFIX /tmp/tpl/)
+
+install(FILES ${TEST_FILES} DESTINATION test)
